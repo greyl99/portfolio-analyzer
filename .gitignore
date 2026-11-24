@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# macOS
+.DS_Store
+# Downloaded market data
+data/market_prices_1y.csv
+
+# Generated analysis outputs
+outputs/

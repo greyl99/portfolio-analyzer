@@ -1,0 +1,65 @@
+## Overview
+
+Portfolio Analyzer V5 is a Python-based financial analysis project that uses historical stock price data downloaded through yfinance. It uses pandas and NumPy to calculate investment returns, average returns, and volatility.
+
+The project also performs 10,000 Monte Carlo simulations to model possible portfolio outcomes over 252 trading days. It compares a single-portfolio simulation with a correlated multi-asset simulation to evaluate potential returns and investment risks.
+
+## Features
+
+- Historical portfolio return analysis
+- Portfolio equity curve visualization
+- Monte Carlo simulation
+- Correlated multi-asset simulation
+- Risk analysis and model comparison
+- Automated testing with pytest
+
+## Technologies
+
+- Python
+- NumPy
+- pandas
+- Matplotlib
+- yfinance
+- pytest
+
+## Usage
+
+**1. Install the required Python packages**
+
+Install the dependencies listed in `requirements.txt`:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+**2. Download historical market data**
+
+```bash
+python3 download_data.py
+```
+
+This script downloads historical stock prices using yfinance and saves them to the `data/` directory.
+
+**3. Run the Portfolio Analyzer**
+
+```bash
+python3 portfolio_v5.py
+```
+
+The program calculates historical portfolio performance, performs Monte Carlo simulations, and saves the analysis results to the `outputs/` directory.
+
+**4. Run automated tests (recommended)**
+
+```bash
+python3 -m pytest tests/ -v
+```
+
+This command runs the automated tests to check selected portfolio validation and simulation functions.
+
+## Limitations
+
+This project uses historical stock returns and volatility to estimate possible future portfolio outcomes.
+
+Past performance does not guarantee future results. Market conditions, asset correlations, and volatility may change over time.
+
+Monte Carlo simulations provide estimates of potential risks and returns based on model assumptions, rather than guaranteed predictions. The current model also does not account for transaction costs, taxes, or changes in portfolio weights.
